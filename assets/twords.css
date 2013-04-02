@@ -1,0 +1,69 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    background: lightgrey;
+}
+
+body {
+    background: white;
+    width: 75%;
+    margin: 1em auto 1em auto;
+    border: thin solid black;
+    padding: 1em;
+}
+
+.hit {
+    background-color: grey;
+}
+
+.game {
+    width: 75%;
+    margin: auto;
+}
+
+.game:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.timer {
+    font-style: bold;
+}
+
+.warn {
+    color: red;
+}
+
+.good {
+    color: green;
+}
+
+.bad {
+    color: red;
+}
+
+.board {
+    font-size: 200%;
+}
+
+.input {
+}
+
+.board td {
+    border: thin solid black;
+    padding: .5em;
+    transition: background-color 0.0625s;
+    -webkit-transition: background-color 0.25s;
+    -moz-transition: background-color 0.25s;
+}
+
+.blanked {
+    background-color: black;
+}

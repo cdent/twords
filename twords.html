@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Words!</title>
+        <link href="/bags/twords_public/tiddlers/twords.css"
+        rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Words!</h1>
+        <div id="game">
+            <div class="timer">
+            </div>
+            <div class="board">
+            </div>
+            <div class="input">
+                <label for="word">Try:
+                    <input name="word" size="15" placeholder="try">
+                </label>
+                <input type="submit" name="start" value="start">
+                <input type="submit" disabled="disabled" name="done" value="done">
+                <input type="submit" name="solve" value="solve">
+            </div>
+            <ul class="choices">
+            </ul>
+            <ul class="finds">
+            </ul>
+        </div>
+        <div class="footer">
+            Another <a
+                href="http://tsapp.tiddlyspace.com/">@tsapp</a> from
+            <a href="http://cdent.tiddlyspace.com/">@cdent</a>.
+        </div>
+        <script src="/bags/twords_public/tiddlers/words.js"></script>
+        <script src="/bags/common/tiddlers/jquery.js"></script>
+        <script src="/bags/twords_public/tiddlers/twords.js"></script>
+    </body>
+</html>
