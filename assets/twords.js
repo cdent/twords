@@ -26,6 +26,30 @@ $(function() {
 		return letterList;
 	}
 
+	function inTrie(data, full) {
+		var currentDict = words,
+			wordLen = data.length,
+			i;
+		for (i = 0; i < wordLen ; i++) {
+			var currentLetter = data[i];
+			if (currentDict[currentLetter]) {
+				currentDict = currentDict[currentLetter]
+			} else {
+				return false;
+			}
+		}
+		if (full) {
+			if (currentDict[0]) {
+				return true;
+		    } else {
+				return false;
+			}
+		} else {
+			return true;
+		}
+	}
+
+
 	function buildBoard(place, boardData) {
 		var square = Math.sqrt(boardData.length),
 			table = $('<table>'),
@@ -125,9 +149,7 @@ $(function() {
 
 	function isWord(board, currentWord) {
 		var thisWord = makeWord(board, currentWord);
-		return (thisWord.length > 2 &&
-				words[thisWord] &&
-				words[thisWord].indexOf(thisWord) !== -1);
+		return (thisWord.length > 2 && inTrie(thisWord, true));
 	}
 
 	function makeWord(board, currentWord) {
@@ -140,7 +162,7 @@ $(function() {
 
 	function startsWord(board, currentWord) {
 		var thisWord = makeWord(board, currentWord);
-		return words[thisWord];
+		return inTrie(thisWord);
 	}
 
 	function hunt(board, currentWord, finds) {
