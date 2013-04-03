@@ -14,6 +14,9 @@ that data structure available in a browser. `words.js` is a 37M
 file... With a `_cache-max-age` it's better but still needs to be
 interpreted.
 
+**Update**: Switching to a more formal trie gets the size down to
+just under 7M. Still large but much better.
+
 # Why
 
 Cuz, why not?
