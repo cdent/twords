@@ -235,6 +235,8 @@ $(function() {
 
 	function solveBoard(output, board) {
 		var foundWords = startHunt(board);
+		foundWords.sort()
+		foundWords.sort(function(a, b) { return (b.length - a.length) });
 		$.each(foundWords, function(index, word) {
 			var link = $('<a>')
 				.attr({'href': 'http://google.com/search?q=define:' + word,
